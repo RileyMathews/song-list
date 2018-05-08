@@ -12,7 +12,8 @@ $(document).ready(function () {
     */
 
     $btn.click(() => {
-        $.ajax("http://127.0.0.1:8080/songs.json")
+        $output.empty()
+        $.ajax("songs.json")
             .then(response => {
                 response.songs.forEach(song => {
                     $output.append(
